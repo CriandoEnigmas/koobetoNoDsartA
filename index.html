@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>ti tosp</title>
+
+<style>
+  body {
+    margin: 0;
+    background: black; 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* FUNDO COMO CAMADA SEPARADA (funciona melhor no GitHub) */
+  .bg {
+    position: fixed;
+    inset: 0;
+    background-image: url("wallpaper.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.10;
+    z-index: 0;
+  }
+
+  .container {
+    text-align: center;
+    transform: translateY(-25px);
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    width: 450px;
+    max-width: 95vw;
+    display: block;
+    margin: 0 auto 22px;
+  }
+
+  .texto {
+    letter-spacing: 2.5px;
+    font-size: 30px;
+    opacity: 0.9;
+  }
+
+  /* ✅ LOGO NO CANTO INFERIOR DIREITO */
+  .logo {
+    position: fixed;
+    bottom: -10px;
+    right: -5px;
+    width: 250px; /* ajuste se quiser */
+    z-index: 2; /* fica acima do fundo */
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- CAMADA DE FUNDO -->
+  <div class="bg"></div>
+
+  <div class="container">
+    <img src="leonardodavinci.png">
+    <div class="texto">Eu sempre quis decifrar suas anotações.</div>
+  </div>
+
+  <!-- ✅ LOGO -->
+  <img src="logo.png" class="logo" alt="logo">
+
+</body>
+</html>
